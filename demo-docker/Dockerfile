@@ -16,5 +16,5 @@ ARG JAR_FILE=target/demo-docker-0.0.1-SNAPSHOT.jar
 # Add the application's jar to the container
 ADD ${JAR_FILE} demo-docker-0.0.1-SNAPSHOT.jar
 
-# Run the jar file
+# Run the jar fil
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/demo-docker-0.0.1-SNAPSHOT.jar"]
