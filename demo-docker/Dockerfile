@@ -11,12 +11,12 @@ VOLUME /tmp
 EXPOSE 8080
 
 # The application's jar file
-ARG JAR_FILE=target/demo-docker-0.0.1-SNAPSHOT.jar
+#ARG JAR_FILE=target/demo-docker-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} demo-docker-0.0.1-SNAPSHOT.jar
+#ADD ${JAR_FILE} demo-docker-0.0.1-SNAPSHOT.jar
 
-ENV JAVA_OPTS="-Xms512M -Xmx2G"
+ENV JAVA_OPTS="-Xms1G -Xmx2G"
 
 # Run the jar fil
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/demo-docker-0.0.1-SNAPSHOT.jar"]
